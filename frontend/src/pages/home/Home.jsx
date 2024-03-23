@@ -1,4 +1,4 @@
-import { Sidebar } from "../../components";
+import { MessageContainer, Sidebar } from "../../components";
 
 const Home = () => {
   return (
@@ -7,7 +7,7 @@ const Home = () => {
     backdrop-filter backdrop-blur-lg bg-opacity-0"
     >
       <Sidebar />
-      {/* <MessageContainer /> */}
+      <MessageContainer />
     </div>
   );
 };

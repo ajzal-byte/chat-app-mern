@@ -4,5 +4,17 @@ import SearchInput from "./sidebar/SearchInput";
 import Conversations from "./sidebar/Conversations";
 import LogoutButton from "./sidebar/LogoutButton";
 
+// Message Components
+import MessageContainer from "./messages/MessageContainer";
+import Messages from "./messages/Messages";
+import Message from "./messages/Message";
 
-export { Sidebar, SearchInput, Conversations, LogoutButton };
+export {
+  Sidebar,
+  SearchInput,
+  Conversations,
+  LogoutButton,
+  MessageContainer,
+  Messages,
+  Message,
+};
