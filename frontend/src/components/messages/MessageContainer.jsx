@@ -1,4 +1,4 @@
-import { Messages } from "../";
+import { Messages, MessageInput } from "../";
 
 const MessageContainer = () => {
   return (
@@ -11,7 +11,7 @@ const MessageContainer = () => {
         </div>
 
         <Messages />
-        {/* <MessageInput /> */}
+        <MessageInput />
       </>
     </div>
   );

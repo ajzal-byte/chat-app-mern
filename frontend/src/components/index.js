@@ -8,6 +8,7 @@ import LogoutButton from "./sidebar/LogoutButton";
 import MessageContainer from "./messages/MessageContainer";
 import Messages from "./messages/Messages";
 import Message from "./messages/Message";
+import MessageInput from "./messages/MessageInput";
 
 export {
   Sidebar,
@@ -17,4 +18,5 @@ export {
   MessageContainer,
   Messages,
   Message,
+  MessageInput
 };
