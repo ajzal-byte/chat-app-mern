@@ -1,15 +1,16 @@
 import { Message } from "../";
-import useGetMessages from "../../hooks/useGetMessages";
 import { MessageSkeleton } from "../";
 import { useEffect, useRef } from "react";
+import { useGetMessages, useListenMessages } from "../../hooks";
 
 const Messages = () => {
   const { loading, messages } = useGetMessages();
+  useListenMessages();
   const lastMessageRef = useRef(null);
   useEffect(() => {
     setTimeout(() => {
       lastMessageRef.current?.scrollIntoView({ behavior: "smooth" });
-    }, 50)
+    }, 50);
   }, [messages]);
   return (
     <div className="px-4 flex-1 overflow-auto max-w-screen-sm">
