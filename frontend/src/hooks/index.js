@@ -1,3 +1,4 @@
 import useSignup from "./useSignup";
+import useLogout from "./useLogout";
 
-export { useSignup };
+export { useSignup, useLogout };
