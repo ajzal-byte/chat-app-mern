@@ -7,7 +7,7 @@ const Conversation = ({ conversation, emoji, lastIndex }) => {
     <>
       <div
         className={`flex gap-2 items-center hover:bg-green-700 rounded p-2 py-1 cursor-pointer
-      ${isSelected ? "bg-sky-500" : ""} `}
+      ${isSelected ? "bg-green-700" : ""} `}
         onClick={() => setSelectedConversation(conversation)}
       >
         <div className="avatar online">
