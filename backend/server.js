@@ -7,10 +7,10 @@ import messageRoutes from "./routes/message.routes.js";
 import userRoutes from "./routes/user.routes.js";
 
 import connectToMongoDB from "./db/connectToMongoDB.js";
+import { app, server } from "./socket/socket.js";
 
 dotenv.config();
 
-const app = express();
 const PORT = process.env.PORT || 5000;
 
 app.use(express.json()); // to parse the incoming requests with JSON payloads (from req.body)
@@ -20,13 +20,7 @@ app.use("/api/auth", authRoutes);
 app.use("/api/messages", messageRoutes);
 app.use("/api/users", userRoutes);
 
-// app.use(express.urlencoded({ extended: false }));
-
-// app.get("/", (req, res) => {
-//   res.send("Hello world!");
-// });
-
-app.listen(PORT, async () => {
+server.listen(PORT, async () => {
   await connectToMongoDB();
   console.log(`Server started listening on port ${PORT}`);
 });
