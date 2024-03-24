@@ -7,7 +7,7 @@ const Conversation = ({ conversation, emoji, lastIndex }) => {
     <>
       <div
         className={`flex gap-2 items-center hover:bg-green-700 rounded p-2 py-1 cursor-pointer
-      ${isSelected ? "bg-green-700" : ""} `}
+      ${isSelected ? "bg-green-900" : ""} `}
         onClick={() => setSelectedConversation(conversation)}
       >
         <div className="avatar online">
@@ -18,7 +18,7 @@ const Conversation = ({ conversation, emoji, lastIndex }) => {
 
         <div className="flex flex-col flex-1">
           <div className="flex gap-3 justify-between">
-            <p className="font-bold text-gray-200">{conversation.fullName}</p>
+            <p className="font-bold text-gray-200">{conversation.username}</p>
             <span className="text-xl">{emoji}</span>
           </div>
         </div>
