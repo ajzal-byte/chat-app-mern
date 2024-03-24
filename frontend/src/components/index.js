@@ -10,6 +10,9 @@ import Messages from "./messages/Messages";
 import Message from "./messages/Message";
 import MessageInput from "./messages/MessageInput";
 
+// Skeleton Componenets
+import MessageSkeleton from "../components/skeletons/MessageSkeleton"
+
 export {
   Sidebar,
   SearchInput,
@@ -18,5 +21,6 @@ export {
   MessageContainer,
   Messages,
   Message,
-  MessageInput
+  MessageInput,
+  MessageSkeleton
 };

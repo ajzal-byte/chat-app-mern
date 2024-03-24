@@ -1,16 +1,26 @@
-const Message = () => {
+import { useAuthContext } from "../../context/AuthContext";
+import useConversation from "../../zustand/useConversation";
+
+const Message = ({ message }) => {
+  const { authUser } = useAuthContext();
+  const { selectedConversation } = useConversation();
+  const fromMe = message.senderId === authUser._id;
+  const chatClassName = fromMe ? "chat-end" : "chat-start";
+  const profilePic = fromMe
+    ? authUser.profilePic
+    : selectedConversation.profilePic;
+  const bubbleBgColor = fromMe ? "bg-blue-500" : "";
   return (
-    <div className="chat chat-end">
+    <div className={`chat ${chatClassName}`}>
       <div className="chat-image avatar">
         <div className="w-10 rounded-full">
           <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyCUe9wnnxcH6NBN-4j1oDzYPgBcEKdJgj6A"
+            src={profilePic}
             alt="user avatar"
           />
         </div>
       </div>
-      <div className="chat-bubble text-white bg-blue-500">Hi! what's up?</div>
-      <div className="chat-bubble text-white bg-blue-500">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto porro, fugit, similique blanditiis quis ut id magnam cupiditate dignissimos iusto consectetur, accusamus laborum? Eius quos sequi explicabo eos provident nisi?</div>
+      <div className={`chat-bubble text-white ${bubbleBgColor}`}>{message.message}</div>
       <div className="chat-footer opacity-50 text-xs flex gap-1">9:41</div>
     </div>
   );
