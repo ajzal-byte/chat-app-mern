@@ -39,7 +39,7 @@ const Login = () => {
           >
             Don't have an account?
           </Link>
-          <button className="btn btn-block btn-sm mt-2">Login</button>
+          <button className="btn btn-block btn-sm mt-2 border border-slate-700">Login</button>
         </form>
       </div>
     </div>
