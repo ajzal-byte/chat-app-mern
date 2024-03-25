@@ -48,10 +48,5 @@ const handleInputErrors = (username, password) => {
     return false;
   }
 
-  if (username.length < 3) {
-    toast.error("Username must have atleast 3 characters");
-    return false;
-  }
-
   return true;
 };

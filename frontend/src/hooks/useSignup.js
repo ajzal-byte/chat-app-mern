@@ -80,6 +80,11 @@ const handleInputErrors = ({
     return false;
   }
 
+  if (username.length < 3) {
+    toast.error("Username must have atleast 3 characters");
+    return false;
+  }
+
   if (password !== confirmPassword) {
     toast.error("Passwords do not match");
     return false;
