@@ -2,9 +2,11 @@ import { Message } from "../";
 import { MessageSkeleton } from "../";
 import { useEffect, useRef } from "react";
 import { useGetMessages, useListenMessages } from "../../hooks";
+import useConversation from "../../zustand/useConversation";
 
 const Messages = () => {
   const { loading, messages } = useGetMessages();
+  const { selectedConversation } = useConversation();
   useListenMessages();
   const lastMessageRef = useRef(null);
   useEffect(() => {
@@ -25,7 +27,7 @@ const Messages = () => {
       {loading && [...Array(3)].map((_, i) => <MessageSkeleton key={i} />)}
 
       {!loading && messages.length === 0 && (
-        <p className="text-center">Send a message to start the conversation</p>
+        <p className="text-center max-w-96">This is the very beginning of your legendary conversation with {selectedConversation.fullName}</p>
       )}
     </div>
   );
