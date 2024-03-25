@@ -3,6 +3,7 @@ import Sidebar from "./sidebar/Sidebar";
 import SearchInput from "./sidebar/SearchInput";
 import Conversations from "./sidebar/Conversations";
 import LogoutButton from "./sidebar/LogoutButton";
+import BackButton from "./sidebar/BackButton";
 
 // Message Components
 import MessageContainer from "./messages/MessageContainer";
@@ -18,6 +19,7 @@ export {
   SearchInput,
   Conversations,
   LogoutButton,
+  BackButton,
   MessageContainer,
   Messages,
   Message,
