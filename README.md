@@ -1,6 +1,6 @@
 # Bello ChatApp
 
-ChatApp is a real-time messaging application built using the MERN (MongoDB, Express.js, React.js, Node.js) stack along with Socket.io for real-time communication. It also utilizes TailwindCSS and Daisy UI for styling, providing a visually appealing and responsive user interface.
+This is a real-time messaging application built using the MERN (MongoDB, Express.js, React.js, Node.js) stack along with Socket.io for real-time communication. It also utilizes TailwindCSS and Daisy UI for styling, providing a visually appealing and responsive user interface.
 
 ## Features
 
